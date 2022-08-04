@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 function Filter({ filter, filterChang }) {
   return (
@@ -14,5 +14,9 @@ function Filter({ filter, filterChang }) {
     </label>
   );
 }
+Filter.propTypes = {
+  filter: PropTypes.string,
+  filterChang: PropTypes.func,
+};
 
 export default Filter;

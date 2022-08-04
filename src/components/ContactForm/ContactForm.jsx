@@ -1,22 +1,23 @@
-import React, { Component } from "react";
-import s from "./ContactForm.module.css";
+import React, { Component } from 'react';
+import s from './ContactForm.module.css';
+import PropTypes from 'prop-types';
 
 class ContactForm extends Component {
   state = {
-    name: "",
-    number: "",
+    name: '',
+    number: '',
   };
-  handelChange = (e) => {
+  handelChange = e => {
     const { name, value } = e.target;
 
     this.setState({ [name]: value });
     e.carentTarget.reset();
   };
   reset = () => {
-    this.setState({ name: "", number: "" });
+    this.setState({ name: '', number: '' });
   };
 
-  atSubmit = (e) => {
+  atSubmit = e => {
     e.preventDefault();
     const { onAddContact } = this.props;
     const { name, number } = this.state;
@@ -55,5 +56,8 @@ class ContactForm extends Component {
     );
   }
 }
+ContactForm.propTypes = {
+  onAddContact: PropTypes.func,
+};
 
 export default ContactForm;
