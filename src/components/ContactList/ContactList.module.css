@@ -1,0 +1,13 @@
+.item {
+  display: flex;
+
+  align-items: center;
+}
+.title {
+  margin-right: 15px;
+}
+.btn {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+}
